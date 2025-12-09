@@ -20,9 +20,9 @@ const AssignmentsPage = () => {
     const loadInitial = async () => {
       try {
         const [basesRes, eqRes, listRes] = await Promise.all([
-          axios.get(`http://localhost:4000/api/bases`),
-          axios.get(`http://localhost:4000/api/equipment-types`),
-          axios.get(`http://localhost:4000/api/assignments`),
+          axios.get(`https://military-asset-management-system-backend-80y6.onrender.com/api/bases`),
+          axios.get(`https://military-asset-management-system-backend-80y6.onrender.com/api/equipment-types`),
+          axios.get(`https://military-asset-management-system-backend-80y6.onrender.com/api/assignments`),
         ]);
 
         setBases(basesRes.data);
@@ -50,7 +50,7 @@ const AssignmentsPage = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:4000/api/assignments`,
+        `https://military-asset-management-system-backend-80y6.onrender.com/api/assignments`,
         form
       );
 

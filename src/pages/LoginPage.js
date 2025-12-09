@@ -18,7 +18,7 @@ const LoginPage = () => {
     const token = "Basic " + btoa(username + ":" + password);
 
     try {
-      const res = await api.get("http://localhost:4000/api/auth/me", {
+      const res = await api.get("https://military-asset-management-system-backend-80y6.onrender.com/api/auth/me", {
         headers: {
           Authorization: token,
         },

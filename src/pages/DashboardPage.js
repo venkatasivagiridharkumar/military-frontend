@@ -10,7 +10,7 @@ const DashboardPage = () => {
       try {
         setLoading(true);
 
-        const res = await api.get("http://localhost:4000/api/dashboard");
+        const res = await api.get("https://military-asset-management-system-backend-80y6.onrender.com/api/dashboard");
         setMetrics(res.data);
 
       } catch (err) {

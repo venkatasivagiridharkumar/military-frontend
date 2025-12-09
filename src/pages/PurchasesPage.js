@@ -19,9 +19,9 @@ const PurchasesPage = () => {
     const loadInitial = async () => {
       try {
         const [basesRes, eqRes, listRes] = await Promise.all([
-          api.get("http://localhost:4000/api/bases"),
-          api.get("http://localhost:4000/api/equipment-types"),
-          api.get("http://localhost:4000/api/purchases"),
+          api.get("https://military-asset-management-system-backend-80y6.onrender.com/api/bases"),
+          api.get("https://military-asset-management-system-backend-80y6.onrender.com/api/equipment-types"),
+          api.get("https://military-asset-management-system-backend-80y6.onrender.com/api/purchases"),
         ]);
 
         setBases(basesRes.data);

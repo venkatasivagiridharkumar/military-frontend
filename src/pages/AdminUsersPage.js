@@ -20,9 +20,9 @@ const AdminUsersPage = () => {
     const loadInitial = async () => {
       try {
         const [rolesRes, basesRes, usersRes] = await Promise.all([
-          axios.get(`http://localhost:4000/api/roles`),
-          axios.get(`http://localhost:4000/api/bases`),
-          axios.get(`http://localhost:4000/api/users`),
+          axios.get(`https://military-asset-management-system-backend-80y6.onrender.com/api/roles`),
+          axios.get(`https://military-asset-management-system-backend-80y6.onrender.com/api/bases`),
+          axios.get(`https://military-asset-management-system-backend-80y6.onrender.com/api/users`),
         ]);
 
         setRoles(rolesRes.data);
